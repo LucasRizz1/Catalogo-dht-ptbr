@@ -92,6 +92,9 @@ window.FlowPaperViewerEmbedding = window.$f = function(id, args) {
 
     // routine for *.flowpaper.com hosted domains
     var hostname = FLOWPAPER.getHostName();
+// Neutralizado para estudo: forçando hostname como localhost
+hostname = "localhost";
+
 
     if(hostname.indexOf(".flowpaper.")>-1 && hostname.length > 16){
         var subDomain   = hostname.substr(0,hostname.indexOf("flowpaper.")-1);
