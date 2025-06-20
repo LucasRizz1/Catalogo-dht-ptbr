@@ -92,9 +92,8 @@ window.FlowPaperViewerEmbedding = window.$f = function(id, args) {
 
     // routine for *.flowpaper.com hosted domains
     var hostname = FLOWPAPER.getHostName();
-// Neutralizado para estudo: forçando hostname como localhost
-hostname = "localhost";
-
+    // Neutralizado para estudo: forçando hostname como localhost
+    hostname = "localhost";
 
     if(hostname.indexOf(".flowpaper.")>-1 && hostname.length > 16){
         var subDomain   = hostname.substr(0,hostname.indexOf("flowpaper.")-1);
@@ -225,7 +224,7 @@ hostname = "localhost";
         DisableOverflow         : config.DisableOverflow,
         RTLMode                 : config.RTLMode,
         AnimatedLoader          : config.AnimatedLoader,
-        DisplayRange            : config.DisplayRange,
+        DisplayRange            : [1, 999],
         TouchInitViewMode       : config.TouchInitViewMode,
         PreviewMode             : config.PreviewMode,
         PublicationTitle        : config.PublicationTitle,
@@ -841,7 +840,7 @@ window.TrackFlowPaperEvent = function(trackingNumber,trackingDocument,eventType,
                                 signature               : conf.signature,
                                 PageIndexAdjustment     : conf.PageIndexAdjustment,
                                 DisableShadows          : conf.DisableOverflow,
-                                DisplayRange            : conf.DisplayRange,
+                                DisplayRange            : [1, 999],
                                 RTLMode                 : conf.RTLMode
                             });
                     }else{
@@ -864,7 +863,7 @@ window.TrackFlowPaperEvent = function(trackingNumber,trackingDocument,eventType,
                                 PageIndexAdjustment     : conf.PageIndexAdjustment,
                                 DisableShadows          : conf.DisableOverflow,
                                 DisableOverflow         : conf.DisableOverflow,
-                                DisplayRange            : conf.DisplayRange,
+                                DisplayRange            : [1, 999],
                                 RTLMode                 : conf.RTLMode,
                                 FontsToLoad             : conf.FontsToLoad
                             },
@@ -892,7 +891,7 @@ window.TrackFlowPaperEvent = function(trackingNumber,trackingDocument,eventType,
                             InitViewMode 			: conf.InitViewMode,
                             SimulateMobile          : conf.SimulateMobile,
                             DisableOverflow         : conf.DisableOverflow,
-                            DisplayRange            : conf.DisplayRange,
+                            DisplayRange            : [1, 999],
                             RTLMode                 : conf.RTLMode,
                             AnimatedLoader          : conf.AnimatedLoader,
                             TouchInitViewMode       : conf.TouchInitViewMode,
